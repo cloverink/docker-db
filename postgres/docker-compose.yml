@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  pg_cei_dashboard:
+    image: postgres:9.6
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - DEBUG=false
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Manifold1@@
+      - POSTGRES_DB=ianalyticdb
+    volumes:
+      - ./postgresql-data:/var/lib/postgresql
